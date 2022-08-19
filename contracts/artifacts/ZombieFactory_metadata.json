@@ -4,7 +4,67 @@
 	},
 	"language": "Solidity",
 	"output": {
-		"abi": [],
+		"abi": [
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "zombies",
+				"outputs": [
+					{
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"name": "dna",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_name",
+						"type": "string"
+					}
+				],
+				"name": "createRandomZombie",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"name": "zombieId",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"name": "dna",
+						"type": "uint256"
+					}
+				],
+				"name": "NewZombie",
+				"type": "event"
+			}
+		],
 		"devdoc": {
 			"methods": {}
 		},
@@ -25,9 +85,9 @@
 	},
 	"sources": {
 		"contracts/contract.sol": {
-			"keccak256": "0xbb1056b76c4876aff67c99972ccace4c6edd89396066c1d70872028c0e7eaff3",
+			"keccak256": "0x6d7ffe343fca0c3e9b615f4f7bec9449e014552cb9fca5e37bcac50b560e2a69",
 			"urls": [
-				"bzzr://c9f16ec92b81cc4b6fe9e5d7d7adb4e5467ac4b352391b6dd849112555264d18"
+				"bzzr://88491a217d53ff4c00b0f40e33ea7bd24b27e12958534702a87c6816fe7cb3c2"
 			]
 		}
 	},
