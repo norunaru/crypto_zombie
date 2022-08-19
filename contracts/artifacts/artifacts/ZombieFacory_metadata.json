@@ -1,0 +1,35 @@
+{
+	"compiler": {
+		"version": "0.4.19+commit.c4cbbb05"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"methods": {}
+		},
+		"userdoc": {
+			"methods": {}
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/artifacts/contract.sol": "ZombieFacory"
+		},
+		"libraries": {},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/artifacts/contract.sol": {
+			"keccak256": "0x381d5069f50fe0b04493b1a8ff3458af3c608a29d859202abb5fe88fea91bdf6",
+			"urls": [
+				"bzzr://fdda05a7a130f15130d8f609ebdc7eea5e9758339ffcfb6a4213131ff7bb2251"
+			]
+		}
+	},
+	"version": 1
+}
