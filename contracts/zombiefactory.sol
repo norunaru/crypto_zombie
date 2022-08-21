@@ -15,8 +15,14 @@ contract ZombieFactory {
 
      Zombie[] public zombies; //public은 다른 컨트랙트에서 이 컨트랙트를 읽을 수 있음(쓸 수는 없음)
 
-     function _createZombie(string _name, uint _dna) private {  //private함수의 이름은 _로 시작이 관례
+    mapping(uint => address) public zombieToOwner; //좀비 소유권을 저장하는 매핑(좀비ID를 주면 주소 반환)
+    mapping(address => uint) public ownerZombieCount; //소유자의 주소를 통해 소유한 좀비 수 확인
+
+     function _createZombie(string _name, uint _dna) internal {  //private함수의 이름은 _로 시작이 관례
+       
         uint id = zombies.push(Zombie(_name, _dna)) - 1;  //좀비(구조체)를 만들어 구조체 배열 zombies에 넣어주는 함수.
+        zombieToOwner[id] = msg.sender; //msg.sender - 현재 함수를 호출한 사람의 주소 반환
+        ownerZombieCount[msg.sender]++;
         NewZombie(id, _name, _dna); //이벤트 실행
     } //view - 함수가 데이터를 보기만 하고 변경하지 않음. pure - 함수가 앱에서 어떤 데이터도 접근하지 않음.
 
@@ -26,6 +32,7 @@ contract ZombieFactory {
     }
 
      function createRandomZombie(string _name) public  { //이름을 받아 16자리 랜덤 DNA숫자를 받고 이름과 DNA로 구조체를 만들어 구조체 배열에 push
+         require(ownerZombieCount[msg.sender]==0);
         uint randDna = _generateRandomDna(_name);
         _createZombie(_name, randDna);
     }

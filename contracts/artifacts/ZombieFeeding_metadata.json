@@ -1,0 +1,179 @@
+{
+	"compiler": {
+		"version": "0.4.19+commit.c4cbbb05"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "ownerZombieCount",
+				"outputs": [
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_zombieId",
+						"type": "uint256"
+					},
+					{
+						"name": "_kittyId",
+						"type": "uint256"
+					}
+				],
+				"name": "feedOnKitty",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "zombies",
+				"outputs": [
+					{
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"name": "dna",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "zombieToOwner",
+				"outputs": [
+					{
+						"name": "",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_zombieId",
+						"type": "uint256"
+					},
+					{
+						"name": "_targetDna",
+						"type": "uint256"
+					},
+					{
+						"name": "_species",
+						"type": "string"
+					}
+				],
+				"name": "feedAndMultiply",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_name",
+						"type": "string"
+					}
+				],
+				"name": "createRandomZombie",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"name": "zombieId",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"name": "dna",
+						"type": "uint256"
+					}
+				],
+				"name": "NewZombie",
+				"type": "event"
+			}
+		],
+		"devdoc": {
+			"methods": {}
+		},
+		"userdoc": {
+			"methods": {}
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/zombiefeeding.sol": "ZombieFeeding"
+		},
+		"libraries": {},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/zombiefactory.sol": {
+			"keccak256": "0x4168c1f5b71520e48f1e3d176680814a7e7769f85cedff4887b811a60891e5e7",
+			"urls": [
+				"bzzr://094150953d6f42701dc63ecbff4cdf5ddf705f7d2fb7d0ca9b008e689c7ac431"
+			]
+		},
+		"contracts/zombiefeeding.sol": {
+			"keccak256": "0x805a4df2f115b562256919b507c9f8dfbfb2fbaf56537a67b090652a12dcd854",
+			"urls": [
+				"bzzr://0492acb82d2a29d5a602ab123867122cff856ba31acb8260122d1c166ae95192"
+			]
+		}
+	},
+	"version": 1
+}
