@@ -77,6 +77,25 @@
 				"constant": true,
 				"inputs": [
 					{
+						"name": "_owner",
+						"type": "address"
+					}
+				],
+				"name": "getZombiesByOwner",
+				"outputs": [
+					{
+						"name": "",
+						"type": "uint256[]"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
 						"name": "",
 						"type": "uint256"
 					}
@@ -110,6 +129,24 @@
 				"constant": false,
 				"inputs": [
 					{
+						"name": "_zombieId",
+						"type": "uint256"
+					},
+					{
+						"name": "_newDna",
+						"type": "uint256"
+					}
+				],
+				"name": "changeDna",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
 						"name": "_name",
 						"type": "string"
 					}
@@ -132,6 +169,24 @@
 				],
 				"payable": false,
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_zombieId",
+						"type": "uint256"
+					},
+					{
+						"name": "_newName",
+						"type": "string"
+					}
+				],
+				"name": "changeName",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -204,7 +259,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/zombiefeeding.sol": "ZombieFeeding"
+			"contracts/zombiehelper.sol": "ZombieHelper"
 		},
 		"libraries": {},
 		"optimizer": {
@@ -230,6 +285,12 @@
 			"keccak256": "0x8591e2cd394a5e13380d12aa3f8661637bf51ca0a0d7872c351a27b561258daf",
 			"urls": [
 				"bzzr://083055343a1dde29a7d72b8e30fa1f9cd9ef632477a00d35639e9d25ae5f45bd"
+			]
+		},
+		"contracts/zombiehelper.sol": {
+			"keccak256": "0x68f76390a8e9bbff0b2dfdb0c64312f553d4f84136f6704588196ac32197a4ef",
+			"urls": [
+				"bzzr://24639b84a4a129d6a45012c2c755b801ce85f199bc97c432fede2847433e6f24"
 			]
 		}
 	},
