@@ -41298,8 +41298,8 @@
 								}
 							],
 							"contractDependencies": [
-								191,
-								55
+								55,
+								191
 							],
 							"contractKind": "contract",
 							"documentation": null,
@@ -43332,9 +43332,9 @@
 								}
 							],
 							"contractDependencies": [
-								191,
 								55,
-								369
+								369,
+								191
 							],
 							"contractKind": "contract",
 							"documentation": null,
